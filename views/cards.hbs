@@ -1,0 +1,102 @@
+<main>
+<div class="row cards">
+{{#each newObj}}
+  <div class="col s12 m3" id={{_id}}>
+    {{!-- <div class="card blue-grey darken-1"> --}}
+    <div class="card" style="background-color: {{cardColor}};">
+      <div class="card-content white-text">
+        <p class="card-title">Name: {{requester_name}}</>
+      </div>
+      <div class="card-action">
+        <!-- Modal Trigger -->
+        <!-- <a href="#modal_{{_id}}">Donate</a> -->
+        <a href="#modal_{{_id}}">View Details</a>
+        <a class="btn waves-light" href="#delete_modal_{{_id}}">
+        {{!-- type="submit" name="submit_param"> --}}
+        <!-- DEV_PURPOSES: delete button for dev purposes only -->
+        {{!-- value={{_id}} class="link-button-trick delete-button"> --}}
+            Delete
+        </a>
+
+        <!-- Delete Modal -->
+        <div id="delete_modal_{{_id}}" class="modal">
+          <div class="modal-content">
+            <h4>Are you sure you want to delete this card?</h4>
+            <div>
+              <input type="radio" name="{{_id}}" id="yes_{{_id}}" value="yes"/>
+              <label for="yes_{{_id}}">Yes</label>
+
+            </div>
+            <p>
+              <input type="radio" name="{{_id}}" id="no_{{_id}}" value="no"/>
+              <label for="no_{{_id}}">No</label>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class= "modal-action modal-close waves-effect waves-green btn-flat delete-buttons" id="confirm-delete-button_{{_id}}">Submit</a>
+          </div>
+        </div>
+
+        <!-- Modal Structure -->
+         <div id="modal_{{_id}}" class="modal">
+      <div class="modal-content">
+        <h4>Here are the details</h4>
+        {{!-- <form action="#"> --}}
+          <p>
+            <input type="radio" name="{{_id}}" id="test1_{{_id}}" value={{answer}}/>
+            <label for="test1_{{_id}}">{{answer}}</label>
+          </p>
+          <p>
+            <input type="radio" name="{{_id}}" id="test2_{{_id}}" value=10/>
+            <label for="test2_{{_id}}">$10</label>
+          </p>
+          <p>
+            <input type="radio" name="{{_id}}" id="test3_{{_id}}" value=15/>
+            <label for="test3_{{_id}}">$15</label>
+          </p>
+          <p>
+            <input type="radio" name="{{_id}}" id="test4_{{_id}}" value=20/>
+            <label for="test4_{{_id}}">$20</label>
+          </p>
+        {{!-- </form> --}}
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class= "modal-action modal-close waves-effect waves-green btn-flat buttonbears" id="cards-submit-button_{{_id}}">Submit</a>
+      </div>
+    </div>
+   <!--  <div id="modal_{{_id}}" class="modal">
+      <div class="modal-content">
+        <h4>How much would you like to donate?</h4>
+        {{!-- <form action="#"> --}}
+          <p>
+            <input type="radio" name="{{_id}}" id="test1_{{_id}}" value=5/>
+            <label for="test1_{{_id}}">$5</label>
+          </p>
+          <p>
+            <input type="radio" name="{{_id}}" id="test2_{{_id}}" value=10/>
+            <label for="test2_{{_id}}">$10</label>
+          </p>
+          <p>
+            <input type="radio" name="{{_id}}" id="test3_{{_id}}" value=15/>
+            <label for="test3_{{_id}}">$15</label>
+          </p>
+          <p>
+            <input type="radio" name="{{_id}}" id="test4_{{_id}}" value=20/>
+            <label for="test4_{{_id}}">$20</label>
+          </p>
+        {{!-- </form> --}}
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class= "modal-action modal-close waves-effect waves-green btn-flat buttonbears" id="cards-submit-button_{{_id}}">Submit</a>
+      </div>
+    </div> -->
+      </div>
+    </div>
+  {{!-- </div> --}}
+
+
+
+  </div>
+{{/each}}
+</div>
+</main>
