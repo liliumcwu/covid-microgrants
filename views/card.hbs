@@ -1,0 +1,27 @@
+<main>
+<div class="question-wrap">
+  {{#each newObj}}
+    <p style="font-style: italic;">Created: {{getTimeStamp _id}}</p>
+  {{/each}}
+</div>
+  {{#each newObj}}
+  <div class="form-wrap1">
+    <div class={{_id}}>
+      <h5>Question: <span>{{question}}</span></h5>
+      <h5>Answer: <span>{{answer}}</span></h5>
+    </div>
+    <div>
+      <p>Want to edit the answer?</p>
+      <form>
+        <div class="row">
+          <div class="input-field">
+            <input id="new-answer" value="{{answer}}" type="text"></input>
+            <label for="new-answer">New Answer</label>
+          </div>
+        </div>
+      </form>
+      <button class="waves-effect waves-light btn" id="new-answer-button" style="background-color: {{cardColor}};">Update Answer</button>
+    </div>
+  </div>
+  {{/each}}
+</main>
