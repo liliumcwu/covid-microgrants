@@ -1,4 +1,4 @@
-## Developer Setup
+# Developer Setup
 
 1. Install and set up MongoDB.
 2. Run the Mongo dameon using the `mongod` command in your terminal.
